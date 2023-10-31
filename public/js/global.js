@@ -442,7 +442,7 @@ function copyToClipboard(e) {
     t.value;
     document.execCommand("copy"),
     document.body.removeChild(t),
-    showMessage("Code copied to clipboard", "ok")
+    showMessage("Link copied to clipboard", "ok")
 }
 ModalItemsCache = new Map;
 let observer;
@@ -451,10 +451,8 @@ function lazyLoad(e, t) {
         e.forEach(e=>{
             e.isIntersecting && (observer.unobserve(e.target),
             e.target.dispatchEvent(new Event("lazyload")))
-        }
-        )
-    }
-    ),
+        })
+    }),
     observer.observe(e),
     e.addEventListener("lazyload", t, {
         once: !0

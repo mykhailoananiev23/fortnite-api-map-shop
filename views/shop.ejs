@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <title><%= title %></title> -->
+        <title><%= title %></title>
         <meta name="description" content="See what's in today's Fortnite Item Shop right now, all Fortnite skins, special offers &amp; bundles, shop history, your wishlisted cosmetics and more!">
         <meta name="theme-color" content="#2f3136">
-        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/logo/logo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo/32x32.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo/16x16.ico">
         <link rel="manifest" href="site.webmanifest">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-title" content="Fortnite.GG">
@@ -24,32 +24,7 @@
     </head>
     <body>
         <!-- <div class="modal-wrap"></div> -->
-        <header id="header">
-            <div class="header-logo">
-                <div id="logo">
-                    <div if="logoImg"></div>
-                    <h2>Bombfn</h2>
-                  </div>
-            </div>
-            <div class="header-sac">
-                <span class="partner">#ad</span> code 
-                <div class="nav-item-wrap">
-                    <a class="nav-item fngg">xdmhtsos</a>
-                    <div class="nav-item-dropdown">
-                      <a class="nav-item" onclick="copyToClipboard('Hello, World!')">Copy Text</a>
-                    </div>
-                  </div>
-            </div>
-            <nav class="header-menu">
-                <div class="nav-item-wrap">
-                <a class="nav-item" href="/">Map</a>
-                </div>
-                <a class="nav-item active" href="/shop">Shop</a>
-                <div class="nav-item-wrap">
-                <a class="nav-item" href="/cosmetics">Cosmetics</a>
-                </div>
-            </nav>
-        </header>
+        <%- include ('./module/navbar.ejs') %>
         <div style="height: 100px;"></div>
 
         <div class="wrap" style="max-width:1280px">
