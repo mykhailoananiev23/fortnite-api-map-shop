@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <meta name="description" content="List of All Fortnite Cosmetics with gameplay videos, images, rankings, shop history, sets and more!">
+    <meta name="theme-color" content="#2f3136">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest?7">
+    <meta name="apple-mobile-web-app-capable" content="yes"><link rel="stylesheet" href="css/cosmetics-v2.css">
+    <link rel="preconnect" href="https://fnggcdn.com">
+    <link rel="preconnect" href="https://hb.vntsm.com">
+    <link rel="stylesheet" href="/css/global.css">
+    <script type="text/javascript">
+      IsLogged = false;
+      Url = "/cosmetics";
+    </script>
+    <script src="js/global.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="rich-media-placement"></div>
+    <div id="ad-sticky-mobile" style="display: none;">
+      <div style="display:flex;justify-content:center;align-items:center"></div>
+    </div>
+    <header id="header">
+      <div class="header-logo">
+        <div id="logo">
+          <div if="logoImg"></div>
+          <h2>Bombfn</h2>
+        </div>
+      </div>
+      <div class="header-sac">
+        <span class="partner">#ad</span> code
+        <div class="nav-item-wrap">
+          <a class="nav-item fngg">xdmhtsos</a>
+          <div class="nav-item-dropdown">
+            <a class="nav-item" onclick="copyToClipboard('Hello, World!')">Copy Text</a>
+          </div>
+        </div>
+    </div>
+      <nav class="header-menu">
+        <div class="nav-item-wrap">
+        </div>
+        <div class="nav-item-wrap">
+          <a class="nav-item" href="/">Map</a>
+        </div>
+        <a class="nav-item" href="/shop">Shop</a>
+        <div class="nav-item-wrap">
+          <a class="nav-item active" href="/cosmetics">Cosmetics</a>
+        </div>
+      </nav>
+    </header>
+    <div class="padding"></div>
+    <div class="wrap" style="text-align:center">
+      <h1 class="cosmetics-title">
+        <span class="cosmetics-title-all">All</span> Fortnite <span class="cosmetics-subtitle" data-default="Cosmetics">Cosmetics</span>
+        <div>Showing <span id="cosmetics-count"></span>
+          <span class="cosmetics-subtitle" data-default="Cosmetics">Cosmetics</span>
+        </div>
+      </h1>
+      <div class="cosmetics-wrap">
+        <div class="locker-cats-wrap">
+          <div class="locker-cats">
+            <div class="locker-cat active" data-val="">
+              <div class="locker-cat-icon icon-set"></div>
+              <div class="locker-cat-name">All</div>
+            </div>
+            <div class="locker-cat" data-val="outfit">
+              <div class="locker-cat-icon icon-outfit"></div>
+              <div class="locker-cat-name">Outfits</div>
+            </div>
+            <div class="locker-cat" data-val="emote">
+              <div class="locker-cat-icon icon-emote"></div>
+              <div class="locker-cat-name">Emotes</div>
+            </div>
+            <div class="locker-cat" data-val="pickaxe">
+              <div class="locker-cat-icon icon-pickaxe"></div>
+              <div class="locker-cat-name">Pickaxes</div>
+            </div>
+            <div class="locker-cat" data-val="backpack">
+              <div class="locker-cat-icon icon-backpack"></div>
+              <div class="locker-cat-name">BackBlings</div>
+            </div>
+            <div class="locker-cat" data-val="glider">
+              <div class="locker-cat-icon icon-glider"></div>
+              <div class="locker-cat-name">Gliders</div>
+            </div>
+            <div class="locker-cat" data-val="wrap">
+              <div class="locker-cat-icon icon-wrap"></div>
+              <div class="locker-cat-name">Wraps</div>
+            </div>
+            <div class="locker-cat" data-val="loadingscreen">
+              <div class="locker-cat-icon icon-loadingscreen"></div>
+              <div class="locker-cat-name">Loadings</div>
+            </div>
+            <div class="locker-cat" data-val="music">
+              <div class="locker-cat-icon icon-music"></div>
+              <div class="locker-cat-name">Music</div>
+            </div>
+            <div class="locker-cat" data-val="contrail">
+              <div class="locker-cat-icon icon-contrail"></div>
+              <div class="locker-cat-name">Contrails</div>
+            </div>
+            <div class="locker-cat" data-val="spray">
+              <div class="locker-cat-icon icon-spray"></div>
+              <div class="locker-cat-name">Sprays</div>
+            </div>
+            <div class="locker-cat" data-val="emoji">
+              <div class="locker-cat-icon icon-emoji"></div>
+              <div class="locker-cat-name">Emojis</div>
+            </div>
+            <div class="locker-cat" data-val="toy">
+              <div class="locker-cat-icon icon-toy"></div>
+              <div class="locker-cat-name">Toys</div>
+            </div>
+            <div class="locker-cat" data-val="banner">
+              <div class="locker-cat-icon icon-banner"></div>
+              <div class="locker-cat-name">Banners</div>
+            </div>
+            <div class="locker-cat" data-val="bundle">
+              <div class="locker-cat-icon icon-bundle"></div>
+              <div class="locker-cat-name">Bundles</div>
+            </div>
+          </div>
+        </div>
+        <div class="inputs">
+          <div class="search-wrap">
+            <input id="locker-search" class="input" autocomplete="off" tabindex="1" placeholder="Search">
+          </div>
+          <div class="filter-select filter-source">Source <div class="filter-select-inner">
+              <div class="filter-select-btn" style="background-image:url(img/source-shop.png)" data-key="source" data-val="shop">Shop</div>
+              <div class="filter-select-btn" style="background-image:url(img/source-battlepass.png)" data-key="source" data-val="battlepass">Battle Pass</div>
+              <div class="filter-select-btn" style="background-image:url(img/source-crew.png)" data-key="source" data-val="crew">Crew</div>
+              <div class="filter-select-btn" style="background-image:url(img/source-challenges.png)" data-key="source" data-val="challenges">Challenges</div>
+              <div class="filter-select-btn" style="background-image:url(img/source-exclusives.png)" data-key="source" data-val="exclusives">Exclusives</div>
+              <div class="filter-select-btn" style="background-image:url(img/source-packs.png)" data-key="source" data-val="packs">Packs</div>
+            </div>
+          </div>
+          <div class="filter-select filter-rarity">Rarity <div class="filter-select-inner">
+              <div class="filter-select-btn" style="background-image:url(img/rarity-dark.png)" data-key="rarity" data-val="dark">Dark</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-dc.png)" data-key="rarity" data-val="dc">DC</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-frozen.png)" data-key="rarity" data-val="frozen">Frozen</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-gaming.png)" data-key="rarity" data-val="gaming">Gaming</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-icon.png)" data-key="rarity" data-val="icon">Icon</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-lava.png)" data-key="rarity" data-val="lava">Lava</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-marvel.png)" data-key="rarity" data-val="marvel">Marvel</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-shadow.png)" data-key="rarity" data-val="shadow">Shadow</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-slurp.png)" data-key="rarity" data-val="slurp">Slurp</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-starwars.png)" data-key="rarity" data-val="starwars">Star Wars</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-legendary.png)" data-key="rarity" data-val="legendary">Legendary</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-epic.png)" data-key="rarity" data-val="epic">Epic</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-rare.png)" data-key="rarity" data-val="rare">Rare</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-uncommon.png)" data-key="rarity" data-val="uncommon">Uncommon</div>
+              <div class="filter-select-btn" style="background-image:url(img/rarity-common.png)" data-key="rarity" data-val="common">Common</div>
+            </div>
+          </div>
+          <div class="filter-select filter-season">Season <div class="filter-select-inner">
+              <div class="title">Chapter 1</div>
+              <div class="filter-select-btn" data-key="season" data-val="1" data-chapter="1">S1</div>
+              <div class="filter-select-btn" data-key="season" data-val="2" data-chapter="1">S2</div>
+              <div class="filter-select-btn" data-key="season" data-val="3" data-chapter="1">S3</div>
+              <div class="filter-select-btn" data-key="season" data-val="4" data-chapter="1">S4</div>
+              <div class="filter-select-btn" data-key="season" data-val="5" data-chapter="1">S5</div>
+              <div class="filter-select-btn" data-key="season" data-val="6" data-chapter="1">S6</div>
+              <div class="filter-select-btn" data-key="season" data-val="7" data-chapter="1">S7</div>
+              <div class="filter-select-btn" data-key="season" data-val="8" data-chapter="1">S8</div>
+              <div class="filter-select-btn" data-key="season" data-val="9" data-chapter="1">S9</div>
+              <div class="filter-select-btn" data-key="season" data-val="10" data-chapter="1">SX</div>
+              <div class="title">Chapter 2</div>
+              <div class="filter-select-btn" data-key="season" data-val="11" data-chapter="2">S1</div>
+              <div class="filter-select-btn" data-key="season" data-val="12" data-chapter="2">S2</div>
+              <div class="filter-select-btn" data-key="season" data-val="13" data-chapter="2">S3</div>
+              <div class="filter-select-btn" data-key="season" data-val="14" data-chapter="2">S4</div>
+              <div class="filter-select-btn" data-key="season" data-val="15" data-chapter="2">S5</div>
+              <div class="filter-select-btn" data-key="season" data-val="16" data-chapter="2">S6</div>
+              <div class="filter-select-btn" data-key="season" data-val="17" data-chapter="2">S7</div>
+              <div class="filter-select-btn" data-key="season" data-val="18" data-chapter="2">S8</div>
+              <div class="title">Chapter 3</div>
+              <div class="filter-select-btn" data-key="season" data-val="19" data-chapter="3">S1</div>
+              <div class="filter-select-btn" data-key="season" data-val="20" data-chapter="3">S2</div>
+              <div class="filter-select-btn" data-key="season" data-val="21" data-chapter="3">S3</div>
+              <div class="filter-select-btn" data-key="season" data-val="22" data-chapter="3">S4</div>
+              <div class="title">Chapter 4</div>
+              <div class="filter-select-btn" data-key="season" data-val="23" data-chapter="4">S1</div>
+              <div class="filter-select-btn" data-key="season" data-val="24" data-chapter="4">S2</div>
+              <div class="filter-select-btn" data-key="season" data-val="25" data-chapter="4">S3</div>
+              <div class="filter-select-btn" data-key="season" data-val="26" data-chapter="4">S4</div>
+            </div>
+          </div>
+          <!-- <div class="filter-select filter-tag">Tag <div class="filter-select-inner">
+              <div class="filter-select-btn" style="background-image:url(img/tag-styles.png)" data-key="tag" data-val="styles">Styles</div>
+              <div class="filter-select-btn" style="background-image:url(img/tag-reactive.png)" data-key="tag" data-val="reactive">Reactive</div>
+              <div class="filter-select-btn" style="background-image:url(img/tag-traversal.png)" data-key="tag" data-val="traversal">Traversal</div>
+              <div class="filter-select-btn" style="background-image:url(img/tag-builtin.png)" data-key="tag" data-val="builtin">Built-in</div>
+              <div class="filter-select-btn" style="background-image:url(img/tag-synced.png)" data-key="tag" data-val="synced">Synced</div>
+              <div class="filter-select-btn" style="background-image:url(img/tag-animated.png)" data-key="tag" data-val="animated">Animated</div>
+            </div>
+          </div> -->
+          <div class="filter-select filter-sort">Sort by <span id="selected-sort"></span>
+            <div class="filter-select-inner">
+              <div class="filter-select-btn fngg" data-key="sort" data-val="newest">Newest First</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="oldest">Oldest First</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="series">Series</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="rarity">Rarity</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="shop-most-recent">Shop: Most recent</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="shop-longest-wait">Shop: Longest wait</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="a-z">A to Z</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="z-a">Z to A</div>
+              <div class="filter-select-btn fngg" data-key="sort" data-val="style">New Style</div>
+            </div>
+          </div>
+          <div class="filter-select filter-settings">
+            <svg viewBox="0 0 24 24" class="f">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <div class="filter-select-inner">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <div>Size</div>
+                <div>
+                  <div class="gridsize-plus filter">−</div>
+                  <span class="gridsize-value"></span>
+                  <div class="gridsize-minus filter">+</div>
+                </div>
+              </div>
+              <hr>
+              <label class="checkbox-label" style="justify-content:space-between">
+                <div class="checkbox-title">Show name</div>
+                <div class="checkbox">
+                  <svg class="checkbox-slider" viewBox="0 0 28 20" preserveAspectRatio="xMinYMid meet">
+                    <rect fill="#fff" x="4" y="0" height="20" width="20" rx="10"></rect>
+                    <svg class="checkbox-off" viewBox="0 0 20 20" fill="none">
+                      <path fill="rgba(114, 118, 125, 1)" d="M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z"></path>
+                      <path fill="rgba(114, 118, 125, 1)" d="M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z"></path>
+                    </svg>
+                    <svg class="checkbox-on" viewBox="0 0 20 20" fill="none">
+                      <path fill="rgba(67, 181, 129, 1)" d="M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z"></path>
+                      <path fill="rgba(67, 181, 129, 1)" d="M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z"></path>
+                    </svg>
+                  </svg>
+                  <input id="show-name" type="checkbox" class="checkbox-input">
+                </div>
+              </label>
+              <hr>
+              <!-- <label class="checkbox-label" style="justify-content:space-between;margin-bottom:10px">
+                <div class="checkbox-title">Hide wishlisted</div>
+                <div class="checkbox">
+                  <svg class="checkbox-slider" viewBox="0 0 28 20" preserveAspectRatio="xMinYMid meet">
+                    <rect fill="#fff" x="4" y="0" height="20" width="20" rx="10"></rect>
+                    <svg class="checkbox-off" viewBox="0 0 20 20" fill="none">
+                      <path fill="rgba(114, 118, 125, 1)" d="M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z"></path>
+                      <path fill="rgba(114, 118, 125, 1)" d="M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z"></path>
+                    </svg>
+                    <svg class="checkbox-on" viewBox="0 0 20 20" fill="none">
+                      <path fill="rgba(67, 181, 129, 1)" d="M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z"></path>
+                      <path fill="rgba(67, 181, 129, 1)" d="M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z"></path>
+                    </svg>
+                  </svg>
+                  <input id="hide-wishlisted" type="checkbox" class="checkbox-input">
+                </div>
+              </label> -->
+              <!-- <label class="checkbox-label" style="justify-content:space-between">
+                <div class="checkbox-title">Hide owned</div>
+                <div class="checkbox">
+                  <svg class="checkbox-slider" viewBox="0 0 28 20" preserveAspectRatio="xMinYMid meet">
+                    <rect fill="#fff" x="4" y="0" height="20" width="20" rx="10"></rect>
+                    <svg class="checkbox-off" viewBox="0 0 20 20" fill="none">
+                      <path fill="rgba(114, 118, 125, 1)" d="M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z"></path>
+                      <path fill="rgba(114, 118, 125, 1)" d="M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z"></path>
+                    </svg>
+                    <svg class="checkbox-on" viewBox="0 0 20 20" fill="none">
+                      <path fill="rgba(67, 181, 129, 1)" d="M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z"></path>
+                      <path fill="rgba(67, 181, 129, 1)" d="M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z"></path>
+                    </svg>
+                  </svg>
+                  <input id="hide-owned" type="checkbox" class="checkbox-input">
+                </div>
+              </label> -->
+            </div>
+          </div>
+        </div>
+        <div class="inputs filters-active-wrap">
+          <div class="filters-active"></div>
+          <div class="filters-clear">Clear all filters</div>
+        </div>
+        <div id="items" class="locker-items"></div>
+      </div>
+      <div class="back-to-top">
+        <svg viewBox="0 0 24 24" class="f">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </div>
+    </div>
+    <footer class="menu-bottom menu-tos">
+      <a class="item" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Contact</a>
+      <a class="item" href="/about">About</a>
+      <a class="item" href="/policy">Privacy Policy</a>
+      <a class="item" href="/terms">Terms of Service</a>
+    </footer>
+    <script src="js/search.en.js" type="42e117af41807c78682a0429-text/javascript"></script>
+    <script src="js/all-v2.en.js" type="42e117af41807c78682a0429-text/javascript"></script>
+    <script src="js/cosmetics-v2.js" type="42e117af41807c78682a0429-text/javascript"></script>
+    <script src="js/item-details.js" type="197347e16455d05708e628ee-text/javascript"></script>
+    <script src="js/rocket-loader.min.js" data-cf-settings="42e117af41807c78682a0429-|49" defer=""></script>
+  </body>
+</html>

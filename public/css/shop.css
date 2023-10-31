@@ -1,0 +1,123 @@
+h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  border: 0;
+}
+
+h1 div {
+  color: #2cc9e8;
+  font-family: fn;
+  font-size: 16px;
+}
+
+h2 {
+  font-family: fn-title;
+}
+
+.next-rotation {
+  margin: 20px 0;
+}
+
+.next-rotation-empty {
+  pointer-events: none;
+}
+
+.next-rotation-title {
+  display: inline-block;
+  font: 21px fn, sans-serif;
+  text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.next-rotation-title:hover {
+  color: var(--fngg-yellow);
+}
+
+.next-rotation .shop-countdown {
+  display: inline-block;
+  padding: 0 4px;
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.next-rotation .arrow {
+  top: 4px;
+  left: 13px;
+  color: var(--fngg-yellow);
+}
+
+.next-rotation-empty .arrow {
+  display: none;
+}
+
+.next-rotation-sections {
+  display: none;
+  margin-bottom: 25px;
+}
+
+.opened .next-rotation-sections {
+  display: block;
+}
+
+.filters {
+  overflow: auto hidden;
+  white-space: nowrap;
+}
+
+.fn-item-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 8px 8px;
+  background: linear-gradient(0deg, #000 0%, transparent 100%);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.fn-item .img {
+  aspect-ratio: 1/1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.fn-item-price.owned {
+  color: #61cb82 !important;
+}
+
+.fn-item-lastseen {
+  padding: 8px 0 6px;
+  background: #212225;
+  font: 16px fn, sans-serif;
+  text-align: center;
+}
+
+.shop-new {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  padding: 4px 8px 2px;
+  background: #ce0365;
+  font: 16px fn, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.18);
+  z-index: 3;
+}
+
+.bundle-countdown {
+  padding: 3px 0 6px;
+  font: 16px fn, sans-serif;
+  background: #212225;
+  color: #fff;
+  text-align: center;
+}
+
+.bundle-countdown span {
+  text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.fn-item-name {
+  position: static;
+  background: transparent;
+  text-align: left;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+  font-style: normal;
+}
