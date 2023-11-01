@@ -55,7 +55,7 @@ window.addEventListener("popstate", function() {
     $(".modal-wrap") && !$(".modal-wrap").classList.contains("fullpage") && closeModal()
 });
 var modalAd = null;
-async function modal(L, e, b="", x={}) {
+async function modal(eve, L, e, b="", x={}) {
     var sel_id = L;
     const hasFNGG = Items.some(item => item.name === L);
     if (hasFNGG) {
@@ -71,8 +71,8 @@ async function modal(L, e, b="", x={}) {
         x.hideItemArrows || !window.ItemsFiltered && !window.Items || (t = (window.ItemsFiltered || window.Items).findIndex(e=>e.id == L),
         o = (window.ItemsFiltered || window.Items)[t - 1],
         n = (window.ItemsFiltered || window.Items)[t + 1],
-        -1 < t && o && (e += '<div class="close-modal modal-arrow-left" onclick="modal(' + o.id + ', \'item\')"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></div>'),
-        -1 < t && n && (e += '<div class="close-modal modal-arrow-right" onclick="modal(' + n.id + ', \'item\')"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></div>')),
+        -1 < t && o && (e += '<div class="close-modal modal-arrow-left" onclick="itemModal(event,\'' + o.name + '\', \'item\')"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></div>'),
+        -1 < t && n && (e += '<div class="close-modal modal-arrow-right" onclick="itemModal(event,\'' + n.name + '\', \'item\')"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></div>')),
         E.insertAdjacentHTML("beforeend", e);
         const d = $(".item-video", E);
         if (d) {
@@ -291,7 +291,6 @@ async function modal(L, e, b="", x={}) {
     window.storedVotes = {},
     localStorage["fngg_" + window.storedType + "_votes"] && (window.storedVotes = JSON.parse(localStorage["fngg_" + window.storedType + "_votes"]))),
     x.cache ? (t = ModalItemsCache.get(L)) ? o(t) : x.target && x.target.addEventListener("modalItemLoaded", ()=>o(ModalItemsCache.get(L))) : ajax("/item-details?id=" + sel_id + (Url.startsWith("/shop") ? "&shop" : "") + "&num_id=" + L, async function(e) {
-        console.log(e.responseText)
         o(e.responseText);
     })),
     !1
@@ -469,7 +468,7 @@ window.addEventListener("keydown", function(e) {
 document.addEventListener("DOMContentLoaded", function() {
     on($$(".js-modal-item"), "click", function(e) {
         e.preventDefault(),
-        modal(this.dataset.id, "item")
+        modal(e, this.dataset.id, "item")
     }),
     $$(".select").forEach(function(e) {
         var t = $("select", e)
@@ -629,3 +628,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // !0 === window.navigator.standalone ? navigator.sendBeacon("/log?e=pwa-ios") : window.matchMedia("(display-mode: standalone)").matches ? navigator.sendBeacon("/log?e=pwa-android") : /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? navigator.sendBeacon("/log?e=mobile") : navigator.sendBeacon("/log?e=desktop")
 })
 // !IsLogged && "serviceWorker"in navigator && navigator.serviceWorker.register("/firebase-messaging-sw.js?2");
+function itemModal(e, id){
+    e.preventDefault();
+    modal(e, id, "item")
+}
