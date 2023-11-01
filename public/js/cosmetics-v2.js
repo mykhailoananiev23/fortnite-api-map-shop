@@ -44,7 +44,7 @@ function() {
             l.dataset.id = o.name,
             l.addEventListener("click", function(e) {
                 e.preventDefault(),
-                e.target && ("item-add-my-btn" === e.target.className || "item-del-my-btn" === e.target.className) || modal(this.dataset.id, "item")
+                e.target && ("item-add-my-btn" === e.target.className || "item-del-my-btn" === e.target.className) || itemModal(e, this.dataset.id)
             }),
             l.innerHTML = '<div class="item-icon-img' + (o.s ? " plus" : "") + '"><img src="https://fortnite.gg/img/items/' + o.id + "/icon.jpg?" + o.img + '" alt="Fortnite ' + o.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;") + '"></div><div class="item-icon-name">' + o.name + "</div>";
             var r = document.createElement("div");

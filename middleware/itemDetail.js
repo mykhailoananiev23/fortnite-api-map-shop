@@ -56,13 +56,15 @@ async function drawItemDetailModal(rq_id, numId) {
         content += `<div style="text-align:center;overflow:hidden auto;max-height:100vh"><div class="bundle-items">`
         for (let grant of item.grants) {
             content += ` 
-            <a href="/cosmetics?id=10568" class="item-icon" onclick="return modal(10568, &quot;item&quot;)">
+            <a href="/cosmetics?id=`+grant.name+`" class="item-icon" onclick="itemModal(event, '`+ grant.name +`')">
                 <div class="item-icon-img">
                     <img src="${grant.images.icon}">
                 </div>
             </a>`;
         }
-        content += `</div><img class="js-item-img" src="` + (item.images.icon != null ? item.images.icon : null) + `" style="display:inline-block;width:100%;max-width:960px;max-height:none;border-radius:8px" alt=""></div>`;
+        content += `</div>`
+        item.images.icon_background != null && (content += `<img class="js-item-img" src="` + item.images.icon_background + `" style="display:inline-block;width:100%;max-width:960px;max-height:none;border-radius:8px" alt="">`)
+        content += `</div>`
     }
 
     if(item_flg && (item.type.id != "bundle")){
@@ -107,7 +109,7 @@ async function drawItemDetailModal(rq_id, numId) {
     if(childItems.length > 0){
         content += `<div class='fn-detail-details'><div><div><span class='grey'>Part of the </span>${item.set.name} <pan class='grey'>set</pan></div><div class='fn-assets' style='display:block'>`
         for(childItem of childItems){
-            content += `<a href='/cosmetics?id=5721' onclick='return modal(5721, "item")' class='item-icon'><div class='item-icon-img'><img src='${childItem.images.icon}' loading='lazy'></div></a>`
+            content += `<a href='/cosmetics?id=`+childItem.name + `' onclick='itemModal(event, "`+ childItem.name +`")' class='item-icon'><div class='item-icon-img'><img src='${childItem.images.icon}' loading='lazy'></div></a>`
         }
         content += `</div></div>`
     }
