@@ -1035,3 +1035,8 @@
     map.setView(x, 6))  
     // $(".menu-tos").style.display = "block"
 }();
+
+
+function testGoogleAPP(){
+    alert("GP can access to function of tab")
+}

@@ -18,6 +18,8 @@ app.use(express.static('https://fortnite.gg'))
 const shopRouter = require('./router/shop');
 app.use('/', shopRouter);
 
+const apiRouter = require('./router/apiRouter')
+app.use('/api', apiRouter)
 
 /**
  * 
