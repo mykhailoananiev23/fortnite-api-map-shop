@@ -20,6 +20,9 @@ async function landingArr() {
   var res = [];
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
+    if(item.mainId == null){
+      continue;
+    }
     var stt = 0;
     if (i == 0) {
       res.push(items[i].section.name + items[i].section.landingPriority);
@@ -54,6 +57,7 @@ exports.getShopPage = async function (req, res) {
     res.render("shop", {
       title: "BOMBFN",
       filterStt: "landing",
+      url:'/shop',
       cards: items,
     });
   } catch (error) {
@@ -93,6 +97,7 @@ exports.getItemDetails = async function (req, res) {
 exports.getMapPage = async function (req, res) {
   res.render("index", {
     title: "BOMBFN",
+    url:'/index',
   });
 };
 
@@ -101,29 +106,34 @@ exports.getCosmeticsPage = function (req, res) {
     title: "BOMBFN",
     filter: "default",
     item: "",
+    url:'/cosmetics',
   });
 };
 
 exports.getAboutPage = function (req, res) {
   res.render("about", {
-    title: "BOMBFN"
+    title: "BOMBFN",
+    url:'/about',
   })
 }
 
 exports.getPrivacyPage = function (req, res) {
   res.render("privacy", {
-    title: "BOMBFN"
+    title: "BOMBFN",
+    url:'/index',
   })
 }
 
 exports.getTermsPage = function (req, res) {
   res.render("terms", {
-    title: "BOMBFN"
+    title: "BOMBFN",
+    url:'/index',
   })
 }
 
 exports.getContactUs = function (req, res) {
   res.render("contact", {
-    title: "BOMBFN"
+    title: "BOMBFN",
+    url:'/index',
   })
 }

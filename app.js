@@ -1,3 +1,5 @@
+// const https = require('https')
+// const fs = requrie("fs")
 const path = require('path')
 const express = require('express')
 const app = express();
@@ -18,12 +20,19 @@ app.use(express.static('https://fortnite.gg'))
 const shopRouter = require('./router/shop');
 app.use('/', shopRouter);
 
+const apiRouter = require('./router/apiRouter')
+app.use('/api', apiRouter)
 
 /**
  * 
  * 
  */
+// https.createServer(
+//     {
 
+//     },
+//     app
+// )
 
 app.listen(8000, function (req, res) {
     var url = path.join(__dirname, "public")
