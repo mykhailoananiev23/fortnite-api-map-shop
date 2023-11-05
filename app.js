@@ -1,3 +1,5 @@
+// const https = require('https')
+// const fs = requrie("fs")
 const path = require('path')
 const express = require('express')
 const app = express();
@@ -25,7 +27,12 @@ app.use('/api', apiRouter)
  * 
  * 
  */
+// https.createServer(
+//     {
 
+//     },
+//     app
+// )
 
 app.listen(8000, function (req, res) {
     var url = path.join(__dirname, "public")
