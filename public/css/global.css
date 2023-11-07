@@ -2076,3 +2076,16 @@
   outline: 0;
   box-shadow: 0 0 0 5px #ff6a6a;
 }
+
+/* Default styles for the menu */
+nav #menu {
+  display: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  /* Styles for mobile */
+  nav #menu {
+    display: block;
+  }
+}

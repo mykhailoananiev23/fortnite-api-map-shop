@@ -48,8 +48,7 @@ function() {
             }),
             l.innerHTML = '<div class="item-icon-img' + (o.s ? " plus" : "") + '"><img src="https://fortnite.gg/img/items/' + o.id + "/icon.jpg?" + o.img + '" alt="Fortnite ' + o.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;") + '"></div><div class="item-icon-name">' + o.name + "</div>";
             var r = document.createElement("div");
-            r.className = "item-add-my",
-            l.appendChild(r);
+            r.className = "item-add-my";
             var d = document.createElement("div");
             d.className = "item-" + (window.WishlistItems && WishlistItems.includes(o.id) ? "del" : "add") + "-my-btn",
             d.dataset.type = "wishlist",
