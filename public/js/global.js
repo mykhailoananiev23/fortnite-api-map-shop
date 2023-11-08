@@ -314,15 +314,25 @@ function itemStyle(o, e, t, n) {
     }
 }
 function ajax(e, t, o) {
-    var n = new XMLHttpRequest;
-    return n.open(o ? "POST" : "GET", e),
-    o && n.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"),
-    t && (n.onload = function() {
-        t(n)
+    var n = new XMLHttpRequest();
+    n.open(o ? "POST" : "GET", e);
+    o && n.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    if (t) {
+        n.onloadstart = function() {
+            const loading = document.createElement("div")
+            loading.className="cv-spinner"
+            loading.innerHTML = '<span class="spinner"></span>'
+            $('.modal-wrap').append(loading)
+        };
+        n.onloadend = function() {
+            $('.cv-spinner').remove()
+        };
+        n.onload = function() {
+            t(n);
+        };
     }
-    ),
-    n.send(o),
-    n
+    n.send(o);
+    return n;
 }
 function formatVotes(e) {
     return 1e6 <= e ? Math.round(e / 1e6 * 10) / 10 + "M" : 1e3 <= e ? Math.round(e / 1e3 * 10) / 10 + "K" : e
